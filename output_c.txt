@@ -1,0 +1,4488 @@
+Running with 1 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 63
+Duration: 1.98 seconds
+Throughput: 31.84 chunks/second
+
+Matrix multiplication completed in 1.977081 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 2.11 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9318927088      cycles                           #    4.437 GHz                         (46.08%)
+        9871974544      instructions                     #    1.06  insn per cycle              (53.78%)
+          68381187      cache-references                 #   32.555 M/sec                       (61.50%)
+           7993724      cache-misses                     #   11.69% of all cache refs           (69.20%)
+           1100113      branch-misses                                                           (69.24%)
+           2100.46 msec task-clock                       #    0.995 CPUs utilized             
+               166      context-switches                 #   79.030 /sec                      
+                 3      cpu-migrations                   #    1.428 /sec                      
+              3012      page-faults                      #    1.434 K/sec                     
+        2791987449      L1-dcache-loads                  #    1.329 G/sec                       (69.34%)
+        1075433104      L1-dcache-load-misses            #   38.52% of all L1-dcache accesses   (69.35%)
+          26011291      LLC-loads                        #   12.384 M/sec                       (69.35%)
+           3774515      LLC-load-misses                  #   14.51% of all LL-cache accesses    (69.36%)
+        2755002077      dTLB-loads                       #    1.312 G/sec                       (30.78%)
+             73018      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.73%)
+                 0      mem-loads                        #    0.000 /sec                        (38.39%)
+        1123613648      mem-stores                       #  534.937 M/sec                       (38.34%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       2.110971664 seconds time elapsed
+
+       2.085094000 seconds user
+       0.014986000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 2 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 32
+Duration: 1.02 seconds
+Throughput: 31.44 chunks/second
+
+Thread Pair 1:
+Chunks processed: 32
+Duration: 1.02 seconds
+Throughput: 31.45 chunks/second
+
+Matrix multiplication completed in 2.032172 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 1.14 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9283846788      cycles                           #    4.305 GHz                         (46.07%)
+        9875299082      instructions                     #    1.06  insn per cycle              (53.77%)
+          70161715      cache-references                 #   32.533 M/sec                       (61.51%)
+           6460395      cache-misses                     #    9.21% of all cache refs           (69.25%)
+           1125341      branch-misses                                                           (69.33%)
+           2156.62 msec task-clock                       #    1.886 CPUs utilized             
+               106      context-switches                 #   49.151 /sec                      
+                 8      cpu-migrations                   #    3.710 /sec                      
+              3016      page-faults                      #    1.398 K/sec                     
+        2787027702      L1-dcache-loads                  #    1.292 G/sec                       (69.42%)
+        1077158857      L1-dcache-load-misses            #   38.65% of all L1-dcache accesses   (69.42%)
+          28139718      LLC-loads                        #   13.048 M/sec                       (69.42%)
+           1724197      LLC-load-misses                  #    6.13% of all LL-cache accesses    (69.41%)
+        2774062125      dTLB-loads                       #    1.286 G/sec                       (30.60%)
+             85712      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.77%)
+                 0      mem-loads                        #    0.000 /sec                        (38.43%)
+        1116195176      mem-stores                       #  517.566 M/sec                       (38.39%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       1.143264916 seconds time elapsed
+
+       2.145599000 seconds user
+       0.009993000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 3 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.92 chunks/second
+
+Thread Pair 1:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.93 chunks/second
+
+Thread Pair 2:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.85 chunks/second
+
+Matrix multiplication completed in 2.033797 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.81 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9212836219      cycles                           #    4.249 GHz                         (46.13%)
+        9916884431      instructions                     #    1.08  insn per cycle              (53.82%)
+          71482253      cache-references                 #   32.969 M/sec                       (61.54%)
+           3936127      cache-misses                     #    5.51% of all cache refs           (69.20%)
+           1142766      branch-misses                                                           (69.13%)
+           2168.19 msec task-clock                       #    2.665 CPUs utilized             
+               203      context-switches                 #   93.626 /sec                      
+                 9      cpu-migrations                   #    4.151 /sec                      
+              3021      page-faults                      #    1.393 K/sec                     
+        2784328229      L1-dcache-loads                  #    1.284 G/sec                       (69.21%)
+        1071179027      L1-dcache-load-misses            #   38.47% of all L1-dcache accesses   (69.19%)
+          29864346      LLC-loads                        #   13.774 M/sec                       (69.28%)
+            813992      LLC-load-misses                  #    2.73% of all LL-cache accesses    (69.31%)
+        2767712392      dTLB-loads                       #    1.277 G/sec                       (30.98%)
+            100592      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.99%)
+                 0      mem-loads                        #    0.000 /sec                        (38.64%)
+        1120538524      mem-stores                       #  516.808 M/sec                       (38.46%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.813600886 seconds time elapsed
+
+       2.150421000 seconds user
+       0.015995000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 4 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 16
+Duration: 0.51 seconds
+Throughput: 31.59 chunks/second
+
+Thread Pair 1:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Thread Pair 2:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Thread Pair 3:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Matrix multiplication completed in 2.074975 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.68 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9363430721      cycles                           #    4.240 GHz                         (46.28%)
+        9791059000      instructions                     #    1.05  insn per cycle              (54.00%)
+          66776590      cache-references                 #   30.236 M/sec                       (61.70%)
+           2234773      cache-misses                     #    3.35% of all cache refs           (69.38%)
+           1128172      branch-misses                                                           (69.41%)
+           2208.49 msec task-clock                       #    3.256 CPUs utilized             
+               215      context-switches                 #   97.352 /sec                      
+                 6      cpu-migrations                   #    2.717 /sec                      
+              3027      page-faults                      #    1.371 K/sec                     
+        2781831140      L1-dcache-loads                  #    1.260 G/sec                       (69.47%)
+        1071651521      L1-dcache-load-misses            #   38.52% of all L1-dcache accesses   (69.52%)
+          31321577      LLC-loads                        #   14.182 M/sec                       (69.43%)
+            846572      LLC-load-misses                  #    2.70% of all LL-cache accesses    (69.37%)
+        2784377937      dTLB-loads                       #    1.261 G/sec                       (30.58%)
+          11036949      dTLB-load-misses                 #    0.40% of all dTLB cache accesses  (30.67%)
+                 0      mem-loads                        #    0.000 /sec                        (38.52%)
+        1109827378      mem-stores                       #  502.527 M/sec                       (38.58%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.678226005 seconds time elapsed
+
+       2.186562000 seconds user
+       0.020928000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 5 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 13
+Duration: 0.44 seconds
+Throughput: 29.46 chunks/second
+
+Thread Pair 1:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.63 chunks/second
+
+Thread Pair 2:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.64 chunks/second
+
+Thread Pair 3:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.65 chunks/second
+
+Thread Pair 4:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.38 chunks/second
+
+Matrix multiplication completed in 2.318163 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.62 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+       10408568927      cycles                           #    4.219 GHz                         (46.30%)
+        9900992618      instructions                     #    0.95  insn per cycle              (53.94%)
+          42762778      cache-references                 #   17.333 M/sec                       (61.53%)
+           3461134      cache-misses                     #    8.09% of all cache refs           (69.29%)
+           1124677      branch-misses                                                           (69.33%)
+           2467.18 msec task-clock                       #    3.941 CPUs utilized             
+                47      context-switches                 #   19.050 /sec                      
+                 1      cpu-migrations                   #    0.405 /sec                      
+              3030      page-faults                      #    1.228 K/sec                     
+        2786334474      L1-dcache-loads                  #    1.129 G/sec                       (69.34%)
+         786461279      L1-dcache-load-misses            #   28.23% of all L1-dcache accesses   (69.35%)
+          27430773      LLC-loads                        #   11.118 M/sec                       (69.35%)
+           1474997      LLC-load-misses                  #    5.38% of all LL-cache accesses    (69.36%)
+        2776056655      dTLB-loads                       #    1.125 G/sec                       (30.69%)
+         148012513      dTLB-load-misses                 #    5.33% of all dTLB cache accesses  (31.06%)
+                 0      mem-loads                        #    0.000 /sec                        (38.73%)
+        1129449100      mem-stores                       #  457.789 M/sec                       (38.65%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.626037205 seconds time elapsed
+
+       2.448126000 seconds user
+       0.016980000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 6 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 11
+Duration: 0.33 seconds
+Throughput: 33.36 chunks/second
+
+Thread Pair 1:
+Chunks processed: 11
+Duration: 0.33 seconds
+Throughput: 33.34 chunks/second
+
+Thread Pair 2:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.24 chunks/second
+
+Thread Pair 3:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.24 chunks/second
+
+Thread Pair 4:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.25 chunks/second
+
+Thread Pair 5:
+Chunks processed: 11
+Duration: 0.37 seconds
+Throughput: 29.62 chunks/second
+
+Matrix multiplication completed in 2.116801 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.49 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9517499616      cycles                           #    4.243 GHz                         (46.14%)
+        9867301812      instructions                     #    1.04  insn per cycle              (53.81%)
+          50203110      cache-references                 #   22.378 M/sec                       (61.58%)
+            926207      cache-misses                     #    1.84% of all cache refs           (69.32%)
+           1109763      branch-misses                                                           (69.44%)
+           2243.36 msec task-clock                       #    4.533 CPUs utilized             
+                57      context-switches                 #   25.408 /sec                      
+                 4      cpu-migrations                   #    1.783 /sec                      
+              3034      page-faults                      #    1.352 K/sec                     
+        2778940213      L1-dcache-loads                  #    1.239 G/sec                       (69.49%)
+         912942580      L1-dcache-load-misses            #   32.85% of all L1-dcache accesses   (69.51%)
+          24144902      LLC-loads                        #   10.763 M/sec                       (69.52%)
+            206960      LLC-load-misses                  #    0.86% of all LL-cache accesses    (69.52%)
+        2784305874      dTLB-loads                       #    1.241 G/sec                       (30.62%)
+          22282132      dTLB-load-misses                 #    0.80% of all dTLB cache accesses  (30.75%)
+                 0      mem-loads                        #    0.000 /sec                        (38.48%)
+        1122774128      mem-stores                       #  500.487 M/sec                       (38.37%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.494870208 seconds time elapsed
+
+       2.226503000 seconds user
+       0.012991000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 7 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 9
+Duration: 0.28 seconds
+Throughput: 32.00 chunks/second
+
+Thread Pair 1:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.96 chunks/second
+
+Thread Pair 2:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.83 chunks/second
+
+Thread Pair 3:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.84 chunks/second
+
+Thread Pair 4:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.84 chunks/second
+
+Thread Pair 5:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.70 chunks/second
+
+Thread Pair 6:
+Chunks processed: 10
+Duration: 0.32 seconds
+Throughput: 30.96 chunks/second
+
+Matrix multiplication completed in 2.156218 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.45 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9633053601      cycles                           #    4.211 GHz                         (46.57%)
+        9748580136      instructions                     #    1.01  insn per cycle              (54.29%)
+          52452371      cache-references                 #   22.932 M/sec                       (61.98%)
+            738905      cache-misses                     #    1.41% of all cache refs           (69.64%)
+           1111717      branch-misses                                                           (69.72%)
+           2287.35 msec task-clock                       #    5.070 CPUs utilized             
+                69      context-switches                 #   30.166 /sec                      
+                 5      cpu-migrations                   #    2.186 /sec                      
+              3038      page-faults                      #    1.328 K/sec                     
+        2773093357      L1-dcache-loads                  #    1.212 G/sec                       (69.68%)
+        1036369678      L1-dcache-load-misses            #   37.37% of all L1-dcache accesses   (69.59%)
+          25849414      LLC-loads                        #   11.301 M/sec                       (69.46%)
+             64815      LLC-load-misses                  #    0.25% of all LL-cache accesses    (69.23%)
+        2784266235      dTLB-loads                       #    1.217 G/sec                       (30.58%)
+          32713361      dTLB-load-misses                 #    1.17% of all dTLB cache accesses  (30.71%)
+                 0      mem-loads                        #    0.000 /sec                        (38.40%)
+        1110702430      mem-stores                       #  485.585 M/sec                       (38.49%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.451185016 seconds time elapsed
+
+       2.273980000 seconds user
+       0.009977000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 8 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 8
+Duration: 0.28 seconds
+Throughput: 29.02 chunks/second
+
+Thread Pair 1:
+Chunks processed: 8
+Duration: 0.28 seconds
+Throughput: 28.40 chunks/second
+
+Thread Pair 2:
+Chunks processed: 8
+Duration: 0.31 seconds
+Throughput: 26.22 chunks/second
+
+Thread Pair 3:
+Chunks processed: 8
+Duration: 0.31 seconds
+Throughput: 26.23 chunks/second
+
+Thread Pair 4:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.24 chunks/second
+
+Thread Pair 5:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.25 chunks/second
+
+Thread Pair 6:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.25 chunks/second
+
+Thread Pair 7:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.26 chunks/second
+
+Matrix multiplication completed in 2.193523 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.44 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9791351187      cycles                           #    4.200 GHz                         (46.17%)
+        9881629690      instructions                     #    1.01  insn per cycle              (53.77%)
+          53691649      cache-references                 #   23.032 M/sec                       (61.58%)
+            745293      cache-misses                     #    1.39% of all cache refs           (69.28%)
+           1131502      branch-misses                                                           (69.37%)
+           2331.19 msec task-clock                       #    5.315 CPUs utilized             
+               260      context-switches                 #  111.531 /sec                      
+                 3      cpu-migrations                   #    1.287 /sec                      
+              3043      page-faults                      #    1.305 K/sec                     
+        2776048678      L1-dcache-loads                  #    1.191 G/sec                       (69.42%)
+        1070609123      L1-dcache-load-misses            #   38.57% of all L1-dcache accesses   (69.58%)
+          30785061      LLC-loads                        #   13.206 M/sec                       (69.65%)
+             97260      LLC-load-misses                  #    0.32% of all LL-cache accesses    (69.52%)
+        2795455616      dTLB-loads                       #    1.199 G/sec                       (30.68%)
+          95782340      dTLB-load-misses                 #    3.43% of all dTLB cache accesses  (30.83%)
+                 0      mem-loads                        #    0.000 /sec                        (38.75%)
+        1127646011      mem-stores                       #  483.721 M/sec                       (38.66%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.438632059 seconds time elapsed
+
+       2.318856000 seconds user
+       0.007958000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 16 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 4
+Duration: 0.29 seconds
+Throughput: 13.74 chunks/second
+
+Thread Pair 1:
+Chunks processed: 4
+Duration: 0.29 seconds
+Throughput: 13.75 chunks/second
+
+Thread Pair 2:
+Chunks processed: 4
+Duration: 0.29 seconds
+Throughput: 13.75 chunks/second
+
+Thread Pair 3:
+Chunks processed: 4
+Duration: 0.29 seconds
+Throughput: 13.75 chunks/second
+
+Thread Pair 4:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.16 chunks/second
+
+Thread Pair 5:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.16 chunks/second
+
+Thread Pair 6:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.16 chunks/second
+
+Thread Pair 7:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.17 chunks/second
+
+Thread Pair 8:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.16 chunks/second
+
+Thread Pair 9:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.17 chunks/second
+
+Thread Pair 10:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.17 chunks/second
+
+Thread Pair 11:
+Chunks processed: 4
+Duration: 0.33 seconds
+Throughput: 12.06 chunks/second
+
+Thread Pair 12:
+Chunks processed: 4
+Duration: 0.33 seconds
+Throughput: 12.06 chunks/second
+
+Thread Pair 13:
+Chunks processed: 4
+Duration: 0.33 seconds
+Throughput: 12.06 chunks/second
+
+Thread Pair 14:
+Chunks processed: 4
+Duration: 0.33 seconds
+Throughput: 12.06 chunks/second
+
+Thread Pair 15:
+Chunks processed: 5
+Duration: 0.33 seconds
+Throughput: 15.08 chunks/second
+
+Matrix multiplication completed in 2.188471 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.45 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9681280170      cycles                           #    4.182 GHz                         (45.94%)
+        9806568566      instructions                     #    1.01  insn per cycle              (53.32%)
+          63906883      cache-references                 #   27.604 M/sec                       (61.32%)
+            715353      cache-misses                     #    1.12% of all cache refs           (69.20%)
+           1122045      branch-misses                                                           (69.40%)
+           2315.13 msec task-clock                       #    5.120 CPUs utilized             
+               392      context-switches                 #  169.321 /sec                      
+                16      cpu-migrations                   #    6.911 /sec                      
+              3076      page-faults                      #    1.329 K/sec                     
+        2774762150      L1-dcache-loads                  #    1.199 G/sec                       (69.69%)
+        1098316708      L1-dcache-load-misses            #   39.58% of all L1-dcache accesses   (69.91%)
+          44393227      LLC-loads                        #   19.175 M/sec                       (70.12%)
+             93409      LLC-load-misses                  #    0.21% of all LL-cache accesses    (70.15%)
+        2779509312      dTLB-loads                       #    1.201 G/sec                       (30.64%)
+          80895901      dTLB-load-misses                 #    2.91% of all dTLB cache accesses  (31.08%)
+                 0      mem-loads                        #    0.000 /sec                        (38.69%)
+        1114010250      mem-stores                       #  481.187 M/sec                       (38.34%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.452165493 seconds time elapsed
+
+       2.290992000 seconds user
+       0.016904000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 32 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.02 chunks/second
+
+Thread Pair 1:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.02 chunks/second
+
+Thread Pair 2:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.02 chunks/second
+
+Thread Pair 3:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.02 chunks/second
+
+Thread Pair 4:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.02 chunks/second
+
+Thread Pair 5:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 6:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 7:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 8:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 9:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 10:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 11:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.03 chunks/second
+
+Thread Pair 12:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.04 chunks/second
+
+Thread Pair 13:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.04 chunks/second
+
+Thread Pair 14:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.04 chunks/second
+
+Thread Pair 15:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 16:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 17:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 18:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 19:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 20:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 21:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 22:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 23:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.52 chunks/second
+
+Thread Pair 24:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 25:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 26:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 27:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 28:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 29:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 30:
+Chunks processed: 2
+Duration: 0.31 seconds
+Throughput: 6.53 chunks/second
+
+Thread Pair 31:
+Chunks processed: 3
+Duration: 0.31 seconds
+Throughput: 9.80 chunks/second
+
+Matrix multiplication completed in 2.198575 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.43 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9522344303      cycles                           #    4.084 GHz                         (45.83%)
+        9669695280      instructions                     #    1.02  insn per cycle              (52.67%)
+          64036226      cache-references                 #   27.465 M/sec                       (60.55%)
+            829653      cache-misses                     #    1.30% of all cache refs           (68.68%)
+           1143277      branch-misses                                                           (69.15%)
+           2331.54 msec task-clock                       #    5.433 CPUs utilized             
+               743      context-switches                 #  318.673 /sec                      
+                42      cpu-migrations                   #   18.014 /sec                      
+              3145      page-faults                      #    1.349 K/sec                     
+        2777725203      L1-dcache-loads                  #    1.191 G/sec                       (69.88%)
+        1105194550      L1-dcache-load-misses            #   39.79% of all L1-dcache accesses   (70.50%)
+          45106098      LLC-loads                        #   19.346 M/sec                       (70.82%)
+            112823      LLC-load-misses                  #    0.25% of all LL-cache accesses    (70.98%)
+        2762015164      dTLB-loads                       #    1.185 G/sec                       (30.66%)
+          95544640      dTLB-load-misses                 #    3.46% of all dTLB cache accesses  (31.18%)
+                 0      mem-loads                        #    0.000 /sec                        (39.45%)
+        1085611617      mem-stores                       #  465.619 M/sec                       (38.60%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.429120502 seconds time elapsed
+
+       2.304119000 seconds user
+       0.014890000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 50 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.47 chunks/second
+
+Thread Pair 1:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 2:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 3:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 4:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 5:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 6:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 7:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 8:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 9:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 10:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 11:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 12:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 13:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 14:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 15:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 16:
+Chunks processed: 2
+Duration: 0.27 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 17:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 18:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 19:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 20:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.20 chunks/second
+
+Thread Pair 21:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.20 chunks/second
+
+Thread Pair 22:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.20 chunks/second
+
+Thread Pair 23:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 24:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 25:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 26:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 27:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 28:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 29:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 30:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 31:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 32:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 33:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 34:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 35:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.22 chunks/second
+
+Thread Pair 36:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 37:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 38:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 39:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 40:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 41:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.20 chunks/second
+
+Thread Pair 42:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.20 chunks/second
+
+Thread Pair 43:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 44:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 45:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 46:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 47:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 48:
+Chunks processed: 2
+Duration: 0.28 seconds
+Throughput: 7.21 chunks/second
+
+Thread Pair 49:
+Chunks processed: 2
+Duration: 0.25 seconds
+Throughput: 8.15 chunks/second
+
+Matrix multiplication completed in 2.190428 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.40 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9525631341      cycles                           #    4.076 GHz                         (47.76%)
+        9567889990      instructions                     #    1.00  insn per cycle              (54.29%)
+          63829682      cache-references                 #   27.312 M/sec                       (60.71%)
+            637666      cache-misses                     #    1.00% of all cache refs           (67.00%)
+           1130198      branch-misses                                                           (66.28%)
+           2337.05 msec task-clock                       #    5.754 CPUs utilized             
+               704      context-switches                 #  301.235 /sec                      
+                66      cpu-migrations                   #   28.241 /sec                      
+              3222      page-faults                      #    1.379 K/sec                     
+        2765996308      L1-dcache-loads                  #    1.184 G/sec                       (67.43%)
+        1090070838      L1-dcache-load-misses            #   39.41% of all L1-dcache accesses   (68.42%)
+          42768467      LLC-loads                        #   18.300 M/sec                       (69.22%)
+             92558      LLC-load-misses                  #    0.22% of all LL-cache accesses    (70.46%)
+        2715001309      dTLB-loads                       #    1.162 G/sec                       (34.04%)
+          77882503      dTLB-load-misses                 #    2.87% of all dTLB cache accesses  (34.24%)
+                 0      mem-loads                        #    0.000 /sec                        (42.17%)
+        1071412651      mem-stores                       #  458.447 M/sec                       (40.26%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.406152895 seconds time elapsed
+
+       2.297933000 seconds user
+       0.017813000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 64 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.82 chunks/second
+
+Thread Pair 1:
+Chunks processed: 1
+Duration: 0.15 seconds
+Throughput: 6.81 chunks/second
+
+Thread Pair 2:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.95 chunks/second
+
+Thread Pair 3:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 4:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.20 chunks/second
+
+Thread Pair 5:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.20 chunks/second
+
+Thread Pair 6:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.20 chunks/second
+
+Thread Pair 7:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.20 chunks/second
+
+Thread Pair 8:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.21 chunks/second
+
+Thread Pair 9:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.07 chunks/second
+
+Thread Pair 10:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.07 chunks/second
+
+Thread Pair 11:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.78 chunks/second
+
+Thread Pair 12:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.78 chunks/second
+
+Thread Pair 13:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.78 chunks/second
+
+Thread Pair 14:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.78 chunks/second
+
+Thread Pair 15:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 16:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 17:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 18:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 19:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 20:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 21:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 22:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 23:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 24:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 25:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 26:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 27:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 28:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 29:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.79 chunks/second
+
+Thread Pair 30:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 31:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 32:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 33:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 34:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 35:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 36:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 37:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 38:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 39:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 40:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.80 chunks/second
+
+Thread Pair 41:
+Chunks processed: 1
+Duration: 0.27 seconds
+Throughput: 3.68 chunks/second
+
+Thread Pair 42:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 43:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 44:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 45:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 46:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 47:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 48:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 49:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 50:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 51:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 52:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 53:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 54:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 55:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 56:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 57:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 58:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 59:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 60:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 61:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 62:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 63:
+Chunks processed: 4
+Duration: 0.30 seconds
+Throughput: 13.55 chunks/second
+
+Matrix multiplication completed in 2.173070 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.46 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9324190624      cycles                           #    4.006 GHz                         (48.97%)
+        9507397375      instructions                     #    1.02  insn per cycle              (55.61%)
+          61103865      cache-references                 #   26.251 M/sec                       (61.88%)
+            936426      cache-misses                     #    1.53% of all cache refs           (69.58%)
+           1134000      branch-misses                                                           (69.35%)
+           2327.69 msec task-clock                       #    5.066 CPUs utilized             
+               664      context-switches                 #  285.262 /sec                      
+                66      cpu-migrations                   #   28.354 /sec                      
+              3285      page-faults                      #    1.411 K/sec                     
+        2737373700      L1-dcache-loads                  #    1.176 G/sec                       (69.63%)
+        1103539526      L1-dcache-load-misses            #   40.31% of all L1-dcache accesses   (69.17%)
+          41525604      LLC-loads                        #   17.840 M/sec                       (69.22%)
+            125924      LLC-load-misses                  #    0.30% of all LL-cache accesses    (70.11%)
+        2725875831      dTLB-loads                       #    1.171 G/sec                       (32.44%)
+          88575357      dTLB-load-misses                 #    3.25% of all dTLB cache accesses  (33.75%)
+                 0      mem-loads                        #    0.000 /sec                        (41.88%)
+        1078453185      mem-stores                       #  463.316 M/sec                       (40.89%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.459434380 seconds time elapsed
+
+       2.272048000 seconds user
+       0.022631000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 100 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.47 chunks/second
+
+Thread Pair 1:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.48 chunks/second
+
+Thread Pair 2:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.48 chunks/second
+
+Thread Pair 3:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.48 chunks/second
+
+Thread Pair 4:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.48 chunks/second
+
+Thread Pair 5:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.20 chunks/second
+
+Thread Pair 6:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.10 chunks/second
+
+Thread Pair 7:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.10 chunks/second
+
+Thread Pair 8:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.10 chunks/second
+
+Thread Pair 9:
+Chunks processed: 1
+Duration: 0.26 seconds
+Throughput: 3.82 chunks/second
+
+Thread Pair 10:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 11:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 12:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 13:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 14:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 15:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 16:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 17:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.61 chunks/second
+
+Thread Pair 18:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 19:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 20:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 21:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 22:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 23:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 24:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 25:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 26:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 27:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 28:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 29:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 30:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 31:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 32:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.62 chunks/second
+
+Thread Pair 33:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 34:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 35:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 36:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 37:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 38:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 39:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 40:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 41:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 42:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 43:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 44:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 45:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 46:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 47:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.63 chunks/second
+
+Thread Pair 48:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.64 chunks/second
+
+Thread Pair 49:
+Chunks processed: 1
+Duration: 0.28 seconds
+Throughput: 3.64 chunks/second
+
+Thread Pair 50:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.07 chunks/second
+
+Thread Pair 51:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 52:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 53:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 54:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 55:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 56:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 57:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 58:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 59:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.28 chunks/second
+
+Thread Pair 60:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 61:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 62:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 63:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 64:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 65:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 66:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 67:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 68:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 69:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.29 chunks/second
+
+Thread Pair 70:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 71:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 72:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 73:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 74:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 75:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 76:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 77:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 78:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 79:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 80:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.94 chunks/second
+
+Thread Pair 81:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 82:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 83:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 84:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 85:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 86:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 87:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 88:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 89:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 90:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 91:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.90 chunks/second
+
+Thread Pair 92:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 93:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 94:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 95:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 96:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 97:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.91 chunks/second
+
+Thread Pair 98:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.92 chunks/second
+
+Thread Pair 99:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.92 chunks/second
+
+Matrix multiplication completed in 2.198860 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.40 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9373911641      cycles                           #    3.992 GHz                         (50.61%)
+        9485506467      instructions                     #    1.01  insn per cycle              (56.45%)
+          62249889      cache-references                 #   26.513 M/sec                       (62.43%)
+            746223      cache-misses                     #    1.20% of all cache refs           (68.62%)
+           1149643      branch-misses                                                           (65.04%)
+           2347.89 msec task-clock                       #    5.777 CPUs utilized             
+               913      context-switches                 #  388.860 /sec                      
+               122      cpu-migrations                   #   51.962 /sec                      
+              3435      page-faults                      #    1.463 K/sec                     
+        2791769278      L1-dcache-loads                  #    1.189 G/sec                       (63.67%)
+        1071273318      L1-dcache-load-misses            #   38.37% of all L1-dcache accesses   (65.61%)
+          41890547      LLC-loads                        #   17.842 M/sec                       (68.05%)
+            118427      LLC-load-misses                  #    0.28% of all LL-cache accesses    (70.00%)
+        2656950341      dTLB-loads                       #    1.132 G/sec                       (38.29%)
+          68748227      dTLB-load-misses                 #    2.59% of all dTLB cache accesses  (39.61%)
+                 0      mem-loads                        #    0.000 /sec                        (47.73%)
+        1038621922      mem-stores                       #  442.364 M/sec                       (43.82%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.406430059 seconds time elapsed
+
+       2.301969000 seconds user
+       0.021698000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 128 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.82 chunks/second
+
+Thread Pair 1:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.82 chunks/second
+
+Thread Pair 2:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.82 chunks/second
+
+Thread Pair 3:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.32 chunks/second
+
+Thread Pair 4:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.32 chunks/second
+
+Thread Pair 5:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.32 chunks/second
+
+Thread Pair 6:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.32 chunks/second
+
+Thread Pair 7:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 8:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 9:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 10:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 11:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 12:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 13:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 14:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.33 chunks/second
+
+Thread Pair 15:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 16:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 17:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 18:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 19:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 20:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 21:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 22:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 23:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 24:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 25:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.34 chunks/second
+
+Thread Pair 26:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 27:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 28:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 29:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 30:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 31:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 32:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 33:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 34:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 35:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.35 chunks/second
+
+Thread Pair 36:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.36 chunks/second
+
+Thread Pair 37:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.36 chunks/second
+
+Thread Pair 38:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.36 chunks/second
+
+Thread Pair 39:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.36 chunks/second
+
+Thread Pair 40:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 41:
+Chunks processed: 1
+Duration: 0.23 seconds
+Throughput: 4.30 chunks/second
+
+Thread Pair 42:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.17 chunks/second
+
+Thread Pair 43:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.16 chunks/second
+
+Thread Pair 44:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.16 chunks/second
+
+Thread Pair 45:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.16 chunks/second
+
+Thread Pair 46:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 47:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.13 chunks/second
+
+Thread Pair 48:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.13 chunks/second
+
+Thread Pair 49:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 50:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 51:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 52:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 53:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 54:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 55:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 56:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.15 chunks/second
+
+Thread Pair 57:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.15 chunks/second
+
+Thread Pair 58:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.15 chunks/second
+
+Thread Pair 59:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.15 chunks/second
+
+Thread Pair 60:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.15 chunks/second
+
+Thread Pair 61:
+Chunks processed: 1
+Duration: 0.24 seconds
+Throughput: 4.14 chunks/second
+
+Thread Pair 62:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.02 chunks/second
+
+Thread Pair 63:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.02 chunks/second
+
+Thread Pair 64:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 65:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 66:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 67:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 68:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 69:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 70:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 71:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.03 chunks/second
+
+Thread Pair 72:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.04 chunks/second
+
+Thread Pair 73:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.04 chunks/second
+
+Thread Pair 74:
+Chunks processed: 1
+Duration: 0.25 seconds
+Throughput: 4.04 chunks/second
+
+Thread Pair 75:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 76:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 77:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 78:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 79:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 80:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 81:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 82:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 83:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.64 chunks/second
+
+Thread Pair 84:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 85:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 86:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 87:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 88:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 89:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.65 chunks/second
+
+Thread Pair 90:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 91:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 92:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 93:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 94:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 95:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.66 chunks/second
+
+Thread Pair 96:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 97:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 98:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 99:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 100:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 101:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 102:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 103:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 104:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 105:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 106:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 107:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.97 chunks/second
+
+Thread Pair 108:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.98 chunks/second
+
+Thread Pair 109:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.89 chunks/second
+
+Thread Pair 110:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.90 chunks/second
+
+Thread Pair 111:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.90 chunks/second
+
+Thread Pair 112:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.90 chunks/second
+
+Thread Pair 113:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.90 chunks/second
+
+Thread Pair 114:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.90 chunks/second
+
+Thread Pair 115:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.88 chunks/second
+
+Thread Pair 116:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.77 chunks/second
+
+Thread Pair 117:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.77 chunks/second
+
+Thread Pair 118:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.77 chunks/second
+
+Thread Pair 119:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.78 chunks/second
+
+Thread Pair 120:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.78 chunks/second
+
+Thread Pair 121:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.78 chunks/second
+
+Thread Pair 122:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.78 chunks/second
+
+Thread Pair 123:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.78 chunks/second
+
+Thread Pair 124:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.79 chunks/second
+
+Thread Pair 125:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.79 chunks/second
+
+Thread Pair 126:
+Chunks processed: 1
+Duration: 0.17 seconds
+Throughput: 5.79 chunks/second
+
+Thread Pair 127:
+Chunks processed: 7
+Duration: 0.36 seconds
+Throughput: 19.42 chunks/second
+
+Matrix multiplication completed in 2.146701 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.58 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        8489399021      cycles                           #    3.626 GHz                         (44.35%)
+        9110711732      instructions                     #    1.07  insn per cycle              (52.04%)
+          61112883      cache-references                 #   26.100 M/sec                       (61.03%)
+           1404115      cache-misses                     #    2.30% of all cache refs           (69.32%)
+           1198011      branch-misses                                                           (69.35%)
+           2341.45 msec task-clock                       #    3.994 CPUs utilized             
+              1031      context-switches                 #  440.326 /sec                      
+               154      cpu-migrations                   #   65.771 /sec                      
+              3555      page-faults                      #    1.518 K/sec                     
+        2722246600      L1-dcache-loads                  #    1.163 G/sec                       (71.55%)
+        1093871372      L1-dcache-load-misses            #   40.18% of all L1-dcache accesses   (74.05%)
+          40738082      LLC-loads                        #   17.399 M/sec                       (76.36%)
+            181004      LLC-load-misses                  #    0.44% of all LL-cache accesses    (78.28%)
+        2722460694      dTLB-loads                       #    1.163 G/sec                       (31.23%)
+         115272232      dTLB-load-misses                 #    4.23% of all dTLB cache accesses  (32.50%)
+                 0      mem-loads                        #    0.000 /sec                        (40.50%)
+        1052043248      mem-stores                       #  449.313 M/sec                       (36.40%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.586284118 seconds time elapsed
+
+       2.251326000 seconds user
+       0.029991000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 150 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.25 chunks/second
+
+Thread Pair 1:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.27 chunks/second
+
+Thread Pair 2:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.27 chunks/second
+
+Thread Pair 3:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.28 chunks/second
+
+Thread Pair 4:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.29 chunks/second
+
+Thread Pair 5:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.30 chunks/second
+
+Thread Pair 6:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.31 chunks/second
+
+Thread Pair 7:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.31 chunks/second
+
+Thread Pair 8:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.18 chunks/second
+
+Thread Pair 9:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.18 chunks/second
+
+Thread Pair 10:
+Chunks processed: 1
+Duration: 0.08 seconds
+Throughput: 12.19 chunks/second
+
+Thread Pair 11:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.10 chunks/second
+
+Thread Pair 12:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.11 chunks/second
+
+Thread Pair 13:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.12 chunks/second
+
+Thread Pair 14:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.13 chunks/second
+
+Thread Pair 15:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.14 chunks/second
+
+Thread Pair 16:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.15 chunks/second
+
+Thread Pair 17:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.16 chunks/second
+
+Thread Pair 18:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.17 chunks/second
+
+Thread Pair 19:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.18 chunks/second
+
+Thread Pair 20:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.19 chunks/second
+
+Thread Pair 21:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.20 chunks/second
+
+Thread Pair 22:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.21 chunks/second
+
+Thread Pair 23:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.22 chunks/second
+
+Thread Pair 24:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.23 chunks/second
+
+Thread Pair 25:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.24 chunks/second
+
+Thread Pair 26:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.25 chunks/second
+
+Thread Pair 27:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.26 chunks/second
+
+Thread Pair 28:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.27 chunks/second
+
+Thread Pair 29:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.28 chunks/second
+
+Thread Pair 30:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.30 chunks/second
+
+Thread Pair 31:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.31 chunks/second
+
+Thread Pair 32:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.32 chunks/second
+
+Thread Pair 33:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.33 chunks/second
+
+Thread Pair 34:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.34 chunks/second
+
+Thread Pair 35:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.35 chunks/second
+
+Thread Pair 36:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.36 chunks/second
+
+Thread Pair 37:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.37 chunks/second
+
+Thread Pair 38:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.28 chunks/second
+
+Thread Pair 39:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 11.37 chunks/second
+
+Thread Pair 40:
+Chunks processed: 1
+Duration: 0.16 seconds
+Throughput: 6.35 chunks/second
+
+Thread Pair 41:
+Chunks processed: 1
+Duration: 0.16 seconds
+Throughput: 6.28 chunks/second
+
+Thread Pair 42:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.67 chunks/second
+
+Thread Pair 43:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.67 chunks/second
+
+Thread Pair 44:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.67 chunks/second
+
+Thread Pair 45:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 46:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 47:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 48:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 49:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 50:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.68 chunks/second
+
+Thread Pair 51:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 52:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 53:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 54:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 55:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 56:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.69 chunks/second
+
+Thread Pair 57:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.70 chunks/second
+
+Thread Pair 58:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.70 chunks/second
+
+Thread Pair 59:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.70 chunks/second
+
+Thread Pair 60:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.37 chunks/second
+
+Thread Pair 61:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.37 chunks/second
+
+Thread Pair 62:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.38 chunks/second
+
+Thread Pair 63:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 64:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 65:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 66:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 67:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 68:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 69:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 70:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 71:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 72:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.30 chunks/second
+
+Thread Pair 73:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 74:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 75:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 76:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 77:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 78:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 79:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.31 chunks/second
+
+Thread Pair 80:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.32 chunks/second
+
+Thread Pair 81:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.32 chunks/second
+
+Thread Pair 82:
+Chunks processed: 1
+Duration: 0.19 seconds
+Throughput: 5.32 chunks/second
+
+Thread Pair 83:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.42 chunks/second
+
+Thread Pair 84:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.42 chunks/second
+
+Thread Pair 85:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.42 chunks/second
+
+Thread Pair 86:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 87:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 88:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 89:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 90:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 91:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 92:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.43 chunks/second
+
+Thread Pair 93:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.44 chunks/second
+
+Thread Pair 94:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.44 chunks/second
+
+Thread Pair 95:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.44 chunks/second
+
+Thread Pair 96:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.44 chunks/second
+
+Thread Pair 97:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.50 chunks/second
+
+Thread Pair 98:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 99:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 100:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 101:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 102:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 103:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 104:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 105:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 106:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 107:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 108:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 109:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.51 chunks/second
+
+Thread Pair 110:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 111:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 112:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 113:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 114:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.52 chunks/second
+
+Thread Pair 115:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 116:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 117:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 118:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 119:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 120:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.53 chunks/second
+
+Thread Pair 121:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.54 chunks/second
+
+Thread Pair 122:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.54 chunks/second
+
+Thread Pair 123:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.54 chunks/second
+
+Thread Pair 124:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.54 chunks/second
+
+Thread Pair 125:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.61 chunks/second
+
+Thread Pair 126:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.61 chunks/second
+
+Thread Pair 127:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.61 chunks/second
+
+Thread Pair 128:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.61 chunks/second
+
+Thread Pair 129:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.61 chunks/second
+
+Thread Pair 130:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.62 chunks/second
+
+Thread Pair 131:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.62 chunks/second
+
+Thread Pair 132:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.62 chunks/second
+
+Thread Pair 133:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.62 chunks/second
+
+Thread Pair 134:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.62 chunks/second
+
+Thread Pair 135:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 136:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 137:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 138:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 139:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 140:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 141:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.63 chunks/second
+
+Thread Pair 142:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 143:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 144:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 145:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 146:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 147:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.64 chunks/second
+
+Thread Pair 148:
+Chunks processed: 1
+Duration: 0.18 seconds
+Throughput: 5.65 chunks/second
+
+Thread Pair 149:
+Chunks processed: 7
+Duration: 0.35 seconds
+Throughput: 20.20 chunks/second
+
+Matrix multiplication completed in 2.141582 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.56 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        8999568283      cycles                           #    3.858 GHz                         (50.75%)
+        9305347099      instructions                     #    1.03  insn per cycle              (56.67%)
+          62961601      cache-references                 #   26.989 M/sec                       (62.06%)
+            980814      cache-misses                     #    1.56% of all cache refs           (67.10%)
+           1163413      branch-misses                                                           (63.26%)
+           2332.85 msec task-clock                       #    4.136 CPUs utilized             
+               832      context-switches                 #  356.646 /sec                      
+               161      cpu-migrations                   #   69.014 /sec                      
+              3648      page-faults                      #    1.564 K/sec                     
+        2741752519      L1-dcache-loads                  #    1.175 G/sec                       (65.58%)
+        1056303840      L1-dcache-load-misses            #   38.53% of all L1-dcache accesses   (69.11%)
+          40212758      LLC-loads                        #   17.238 M/sec                       (70.61%)
+            151321      LLC-load-misses                  #    0.38% of all LL-cache accesses    (71.97%)
+        2643006917      dTLB-loads                       #    1.133 G/sec                       (37.90%)
+          72576686      dTLB-load-misses                 #    2.75% of all dTLB cache accesses  (39.24%)
+                 0      mem-loads                        #    0.000 /sec                        (47.60%)
+        1024988054      mem-stores                       #  439.372 M/sec                       (43.24%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.564013087 seconds time elapsed
+
+       2.239664000 seconds user
+       0.037960000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 200 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.55 chunks/second
+
+Thread Pair 1:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.55 chunks/second
+
+Thread Pair 2:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.55 chunks/second
+
+Thread Pair 3:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.55 chunks/second
+
+Thread Pair 4:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 5:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 6:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 7:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 8:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 9:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 10:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 11:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 12:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.56 chunks/second
+
+Thread Pair 13:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 14:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 15:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 16:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 17:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 18:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 19:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 20:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 21:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 22:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.57 chunks/second
+
+Thread Pair 23:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 24:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 25:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 26:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 27:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 28:
+Chunks processed: 1
+Duration: 0.22 seconds
+Throughput: 4.58 chunks/second
+
+Thread Pair 29:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 30:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 31:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 32:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 33:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 34:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.67 chunks/second
+
+Thread Pair 35:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 36:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 37:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 38:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 39:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 40:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 41:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 42:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 43:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.68 chunks/second
+
+Thread Pair 44:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 45:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 46:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 47:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 48:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 49:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 50:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 51:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.69 chunks/second
+
+Thread Pair 52:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 53:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 54:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 55:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 56:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 57:
+Chunks processed: 1
+Duration: 0.21 seconds
+Throughput: 4.70 chunks/second
+
+Thread Pair 58:
+Chunks processed: 1
+Duration: 0.20 seconds
+Throughput: 4.89 chunks/second
+
+Thread Pair 59:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.11 chunks/second
+
+Thread Pair 60:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 61:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 62:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 63:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.23 chunks/second
+
+Thread Pair 64:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.24 chunks/second
+
+Thread Pair 65:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.24 chunks/second
+
+Thread Pair 66:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.24 chunks/second
+
+Thread Pair 67:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.24 chunks/second
+
+Thread Pair 68:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 69:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 70:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.25 chunks/second
+
+Thread Pair 71:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.26 chunks/second
+
+Thread Pair 72:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.26 chunks/second
+
+Thread Pair 73:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.26 chunks/second
+
+Thread Pair 74:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.27 chunks/second
+
+Thread Pair 75:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.27 chunks/second
+
+Thread Pair 76:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.27 chunks/second
+
+Thread Pair 77:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.27 chunks/second
+
+Thread Pair 78:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.28 chunks/second
+
+Thread Pair 79:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.28 chunks/second
+
+Thread Pair 80:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.28 chunks/second
+
+Thread Pair 81:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.28 chunks/second
+
+Thread Pair 82:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 83:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 84:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.29 chunks/second
+
+Thread Pair 85:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 86:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 87:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 88:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.30 chunks/second
+
+Thread Pair 89:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.31 chunks/second
+
+Thread Pair 90:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.31 chunks/second
+
+Thread Pair 91:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.31 chunks/second
+
+Thread Pair 92:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.31 chunks/second
+
+Thread Pair 93:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.32 chunks/second
+
+Thread Pair 94:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.32 chunks/second
+
+Thread Pair 95:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.32 chunks/second
+
+Thread Pair 96:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.32 chunks/second
+
+Thread Pair 97:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.33 chunks/second
+
+Thread Pair 98:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.33 chunks/second
+
+Thread Pair 99:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.33 chunks/second
+
+Thread Pair 100:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.34 chunks/second
+
+Thread Pair 101:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.34 chunks/second
+
+Thread Pair 102:
+Chunks processed: 1
+Duration: 0.14 seconds
+Throughput: 7.34 chunks/second
+
+Thread Pair 103:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.30 chunks/second
+
+Thread Pair 104:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.31 chunks/second
+
+Thread Pair 105:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.31 chunks/second
+
+Thread Pair 106:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.32 chunks/second
+
+Thread Pair 107:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.32 chunks/second
+
+Thread Pair 108:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.32 chunks/second
+
+Thread Pair 109:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.33 chunks/second
+
+Thread Pair 110:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.33 chunks/second
+
+Thread Pair 111:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.31 chunks/second
+
+Thread Pair 112:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 11.50 chunks/second
+
+Thread Pair 113:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 11.50 chunks/second
+
+Thread Pair 114:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.66 chunks/second
+
+Thread Pair 115:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.66 chunks/second
+
+Thread Pair 116:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.66 chunks/second
+
+Thread Pair 117:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.67 chunks/second
+
+Thread Pair 118:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.67 chunks/second
+
+Thread Pair 119:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.68 chunks/second
+
+Thread Pair 120:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.68 chunks/second
+
+Thread Pair 121:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.69 chunks/second
+
+Thread Pair 122:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.69 chunks/second
+
+Thread Pair 123:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.69 chunks/second
+
+Thread Pair 124:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.70 chunks/second
+
+Thread Pair 125:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.70 chunks/second
+
+Thread Pair 126:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.71 chunks/second
+
+Thread Pair 127:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.71 chunks/second
+
+Thread Pair 128:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.72 chunks/second
+
+Thread Pair 129:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.72 chunks/second
+
+Thread Pair 130:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.72 chunks/second
+
+Thread Pair 131:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.73 chunks/second
+
+Thread Pair 132:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.73 chunks/second
+
+Thread Pair 133:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.74 chunks/second
+
+Thread Pair 134:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.74 chunks/second
+
+Thread Pair 135:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.74 chunks/second
+
+Thread Pair 136:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.75 chunks/second
+
+Thread Pair 137:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.75 chunks/second
+
+Thread Pair 138:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.76 chunks/second
+
+Thread Pair 139:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.76 chunks/second
+
+Thread Pair 140:
+Chunks processed: 1
+Duration: 0.11 seconds
+Throughput: 8.76 chunks/second
+
+Thread Pair 141:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.64 chunks/second
+
+Thread Pair 142:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.64 chunks/second
+
+Thread Pair 143:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.65 chunks/second
+
+Thread Pair 144:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.65 chunks/second
+
+Thread Pair 145:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.65 chunks/second
+
+Thread Pair 146:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.66 chunks/second
+
+Thread Pair 147:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.66 chunks/second
+
+Thread Pair 148:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.67 chunks/second
+
+Thread Pair 149:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.67 chunks/second
+
+Thread Pair 150:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.67 chunks/second
+
+Thread Pair 151:
+Chunks processed: 1
+Duration: 0.12 seconds
+Throughput: 8.68 chunks/second
+
+Thread Pair 152:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.93 chunks/second
+
+Thread Pair 153:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.95 chunks/second
+
+Thread Pair 154:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.93 chunks/second
+
+Thread Pair 155:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.94 chunks/second
+
+Thread Pair 156:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.95 chunks/second
+
+Thread Pair 157:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.95 chunks/second
+
+Thread Pair 158:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.40 chunks/second
+
+Thread Pair 159:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.40 chunks/second
+
+Thread Pair 160:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.41 chunks/second
+
+Thread Pair 161:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.42 chunks/second
+
+Thread Pair 162:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.42 chunks/second
+
+Thread Pair 163:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.43 chunks/second
+
+Thread Pair 164:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.43 chunks/second
+
+Thread Pair 165:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.44 chunks/second
+
+Thread Pair 166:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.45 chunks/second
+
+Thread Pair 167:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.46 chunks/second
+
+Thread Pair 168:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.46 chunks/second
+
+Thread Pair 169:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.47 chunks/second
+
+Thread Pair 170:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.47 chunks/second
+
+Thread Pair 171:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.48 chunks/second
+
+Thread Pair 172:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.49 chunks/second
+
+Thread Pair 173:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.49 chunks/second
+
+Thread Pair 174:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.50 chunks/second
+
+Thread Pair 175:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.51 chunks/second
+
+Thread Pair 176:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.51 chunks/second
+
+Thread Pair 177:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.52 chunks/second
+
+Thread Pair 178:
+Chunks processed: 1
+Duration: 0.10 seconds
+Throughput: 10.53 chunks/second
+
+Thread Pair 179:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.53 chunks/second
+
+Thread Pair 180:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.54 chunks/second
+
+Thread Pair 181:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.55 chunks/second
+
+Thread Pair 182:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.55 chunks/second
+
+Thread Pair 183:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.56 chunks/second
+
+Thread Pair 184:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.56 chunks/second
+
+Thread Pair 185:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.57 chunks/second
+
+Thread Pair 186:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.58 chunks/second
+
+Thread Pair 187:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.58 chunks/second
+
+Thread Pair 188:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.59 chunks/second
+
+Thread Pair 189:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.60 chunks/second
+
+Thread Pair 190:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.61 chunks/second
+
+Thread Pair 191:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.61 chunks/second
+
+Thread Pair 192:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.62 chunks/second
+
+Thread Pair 193:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.62 chunks/second
+
+Thread Pair 194:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.63 chunks/second
+
+Thread Pair 195:
+Chunks processed: 1
+Duration: 0.09 seconds
+Throughput: 10.62 chunks/second
+
+Thread Pair 196:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.57 chunks/second
+
+Thread Pair 197:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.58 chunks/second
+
+Thread Pair 198:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.59 chunks/second
+
+Thread Pair 199:
+Chunks processed: 1
+Duration: 0.07 seconds
+Throughput: 14.61 chunks/second
+
+Matrix multiplication completed in 2.200348 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.41 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        8571837882      cycles                           #    3.619 GHz                         (58.91%)
+        8858813308      instructions                     #    1.03  insn per cycle              (64.64%)
+          60937565      cache-references                 #   25.726 M/sec                       (70.69%)
+           1252531      cache-misses                     #    2.06% of all cache refs           (76.00%)
+           1202991      branch-misses                                                           (71.56%)
+           2368.70 msec task-clock                       #    5.808 CPUs utilized             
+              1074      context-switches                 #  453.413 /sec                      
+               263      cpu-migrations                   #  111.031 /sec                      
+              3862      page-faults                      #    1.630 K/sec                     
+        2754256189      L1-dcache-loads                  #    1.163 G/sec                       (68.08%)
+        1080313698      L1-dcache-load-misses            #   39.22% of all L1-dcache accesses   (68.02%)
+          41358477      LLC-loads                        #   17.460 M/sec                       (69.36%)
+            166936      LLC-load-misses                  #    0.40% of all LL-cache accesses    (69.57%)
+        2657929582      dTLB-loads                       #    1.122 G/sec                       (34.99%)
+          80732967      dTLB-load-misses                 #    3.04% of all dTLB cache accesses  (42.74%)
+                 0      mem-loads                        #    0.000 /sec                        (52.97%)
+         933458871      mem-stores                       #  394.081 M/sec                       (50.45%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.407839932 seconds time elapsed
+
+       2.280209000 seconds user
+       0.039867000 seconds sys
+
+
+
+---------------------------------------------------

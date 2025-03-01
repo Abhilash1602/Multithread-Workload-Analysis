@@ -1,0 +1,61 @@
+Performance Analysis Report
+=========================
+
+Thread Scaling Performance
+-----------------------
+Threads tested: 1, 2, 3, 4, 5, 6, 7, 8, 16, 32, 50, 64, 100, 128, 150, 200
+
+Execution Time Analysis:
+- Best execution time: 0.400 seconds with 50 threads
+- Speedup over single thread: 5.27x
+
+CPU Efficiency:
+- Average IPC (Instructions per Cycle): 1.029
+- Best IPC: 1.076 with 3 threads
+- Average CPU utilization: 4.30 CPUs
+
+Memory Performance:
+- Average cache miss rate: 3.41%
+- Best cache miss rate: 1.00% with 50 threads
+- Average L1 cache miss rate: 37.91%
+- Average LLC cache miss rate: 2.21%
+
+Threading Overhead:
+- Context switches per thread: 9.63
+- CPU migrations per thread: 1.20
+
+Efficiency Scaling (All Threads):
+--------------------------------
+Threads | Exec Time | Speedup | Efficiency | CPU Util
+      1 |     2.110 |    1.00x |      1.00 |     0.99
+      2 |     1.140 |    1.85x |      0.93 |     1.89
+      3 |     0.810 |    2.60x |      0.87 |     2.67
+      4 |     0.680 |    3.10x |      0.78 |     3.26
+      5 |     0.620 |    3.40x |      0.68 |     3.94
+      6 |     0.490 |    4.31x |      0.72 |     4.53
+      7 |     0.450 |    4.69x |      0.67 |     5.07
+      8 |     0.440 |    4.80x |      0.60 |     5.32
+     16 |     0.450 |    4.69x |      0.29 |     5.12
+     32 |     0.430 |    4.91x |      0.15 |     5.43
+     50 |     0.400 |    5.27x |      0.11 |     5.75
+     64 |     0.460 |    4.59x |      0.07 |     5.07
+    100 |     0.400 |    5.27x |      0.05 |     5.78
+    128 |     0.580 |    3.64x |      0.03 |     3.99
+    150 |     0.560 |    3.77x |      0.03 |     4.14
+    200 |     0.410 |    5.15x |      0.03 |     5.81
+
+Thread Scaling Comparison (Powers of 2):
+---------------------------------------
+Metric                    |          1 |          2 |          4 |          8 |         16 |         32 |         64 |        128
+-------------------------+------------+------------+------------+------------+------------+------------+------------+------------
+Execution Time (s)        |       2.11 |       1.14 |       0.68 |       0.44 |       0.45 |       0.43 |       0.46 |       0.58 | 
+Instructions (M)          |    9871.97 |    9875.30 |    9791.06 |    9881.63 |    9806.57 |    9669.70 |    9507.40 |    9110.71 | 
+CPU Cycles (M)            |    9318.93 |    9283.85 |    9363.43 |    9791.35 |    9681.28 |    9522.34 |    9324.19 |    8489.40 | 
+Cache Misses (K)          |    7993.72 |    6460.40 |    2234.77 |     745.29 |     715.35 |     829.65 |     936.43 |    1404.12 | 
+Context Switches          |     166.00 |     106.00 |     215.00 |     260.00 |     392.00 |     743.00 |     664.00 |    1031.00 | 
+CPU Utilization           |       0.99 |       1.89 |       3.26 |       5.32 |       5.12 |       5.43 |       5.07 |       3.99 | 
+L1 Cache Misses (K)       | 1075433.10 | 1077158.86 | 1071651.52 | 1070609.12 | 1098316.71 | 1105194.55 | 1103539.53 | 1093871.37 | 
+LLC Misses (K)            | 3774515.00 | 1724197.00 |  846572.00 |   97260.00 |   93409.00 |  112823.00 |  125924.00 |  181004.00 | 
+
+Speedup                   |       1.00x |       1.85x |       3.10x |       4.80x |       4.69x |       4.91x |       4.59x |       3.64x | 
+Parallel Efficiency       |       1.00 |       0.93 |       0.78 |       0.60 |       0.29 |       0.15 |       0.07 |       0.03 | 

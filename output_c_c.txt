@@ -1,0 +1,482 @@
+Running with 1 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 63
+Duration: 1.98 seconds
+Throughput: 31.84 chunks/second
+
+Matrix multiplication completed in 1.977081 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 2.11 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9318927088      cycles                           #    4.437 GHz                         (46.08%)
+        9871974544      instructions                     #    1.06  insn per cycle              (53.78%)
+          68381187      cache-references                 #   32.555 M/sec                       (61.50%)
+           7993724      cache-misses                     #   11.69% of all cache refs           (69.20%)
+           1100113      branch-misses                                                           (69.24%)
+           2100.46 msec task-clock                       #    0.995 CPUs utilized             
+               166      context-switches                 #   79.030 /sec                      
+                 3      cpu-migrations                   #    1.428 /sec                      
+              3012      page-faults                      #    1.434 K/sec                     
+        2791987449      L1-dcache-loads                  #    1.329 G/sec                       (69.34%)
+        1075433104      L1-dcache-load-misses            #   38.52% of all L1-dcache accesses   (69.35%)
+          26011291      LLC-loads                        #   12.384 M/sec                       (69.35%)
+           3774515      LLC-load-misses                  #   14.51% of all LL-cache accesses    (69.36%)
+        2755002077      dTLB-loads                       #    1.312 G/sec                       (30.78%)
+             73018      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.73%)
+                 0      mem-loads                        #    0.000 /sec                        (38.39%)
+        1123613648      mem-stores                       #  534.937 M/sec                       (38.34%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       2.110971664 seconds time elapsed
+
+       2.085094000 seconds user
+       0.014986000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 2 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 32
+Duration: 1.02 seconds
+Throughput: 31.44 chunks/second
+
+Thread Pair 1:
+Chunks processed: 32
+Duration: 1.02 seconds
+Throughput: 31.45 chunks/second
+
+Matrix multiplication completed in 2.032172 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 1.14 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9283846788      cycles                           #    4.305 GHz                         (46.07%)
+        9875299082      instructions                     #    1.06  insn per cycle              (53.77%)
+          70161715      cache-references                 #   32.533 M/sec                       (61.51%)
+           6460395      cache-misses                     #    9.21% of all cache refs           (69.25%)
+           1125341      branch-misses                                                           (69.33%)
+           2156.62 msec task-clock                       #    1.886 CPUs utilized             
+               106      context-switches                 #   49.151 /sec                      
+                 8      cpu-migrations                   #    3.710 /sec                      
+              3016      page-faults                      #    1.398 K/sec                     
+        2787027702      L1-dcache-loads                  #    1.292 G/sec                       (69.42%)
+        1077158857      L1-dcache-load-misses            #   38.65% of all L1-dcache accesses   (69.42%)
+          28139718      LLC-loads                        #   13.048 M/sec                       (69.42%)
+           1724197      LLC-load-misses                  #    6.13% of all LL-cache accesses    (69.41%)
+        2774062125      dTLB-loads                       #    1.286 G/sec                       (30.60%)
+             85712      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.77%)
+                 0      mem-loads                        #    0.000 /sec                        (38.43%)
+        1116195176      mem-stores                       #  517.566 M/sec                       (38.39%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       1.143264916 seconds time elapsed
+
+       2.145599000 seconds user
+       0.009993000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 3 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.92 chunks/second
+
+Thread Pair 1:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.93 chunks/second
+
+Thread Pair 2:
+Chunks processed: 21
+Duration: 0.68 seconds
+Throughput: 30.85 chunks/second
+
+Matrix multiplication completed in 2.033797 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.81 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9212836219      cycles                           #    4.249 GHz                         (46.13%)
+        9916884431      instructions                     #    1.08  insn per cycle              (53.82%)
+          71482253      cache-references                 #   32.969 M/sec                       (61.54%)
+           3936127      cache-misses                     #    5.51% of all cache refs           (69.20%)
+           1142766      branch-misses                                                           (69.13%)
+           2168.19 msec task-clock                       #    2.665 CPUs utilized             
+               203      context-switches                 #   93.626 /sec                      
+                 9      cpu-migrations                   #    4.151 /sec                      
+              3021      page-faults                      #    1.393 K/sec                     
+        2784328229      L1-dcache-loads                  #    1.284 G/sec                       (69.21%)
+        1071179027      L1-dcache-load-misses            #   38.47% of all L1-dcache accesses   (69.19%)
+          29864346      LLC-loads                        #   13.774 M/sec                       (69.28%)
+            813992      LLC-load-misses                  #    2.73% of all LL-cache accesses    (69.31%)
+        2767712392      dTLB-loads                       #    1.277 G/sec                       (30.98%)
+            100592      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (30.99%)
+                 0      mem-loads                        #    0.000 /sec                        (38.64%)
+        1120538524      mem-stores                       #  516.808 M/sec                       (38.46%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.813600886 seconds time elapsed
+
+       2.150421000 seconds user
+       0.015995000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 4 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 16
+Duration: 0.51 seconds
+Throughput: 31.59 chunks/second
+
+Thread Pair 1:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Thread Pair 2:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Thread Pair 3:
+Chunks processed: 16
+Duration: 0.54 seconds
+Throughput: 29.90 chunks/second
+
+Matrix multiplication completed in 2.074975 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.68 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9363430721      cycles                           #    4.240 GHz                         (46.28%)
+        9791059000      instructions                     #    1.05  insn per cycle              (54.00%)
+          66776590      cache-references                 #   30.236 M/sec                       (61.70%)
+           2234773      cache-misses                     #    3.35% of all cache refs           (69.38%)
+           1128172      branch-misses                                                           (69.41%)
+           2208.49 msec task-clock                       #    3.256 CPUs utilized             
+               215      context-switches                 #   97.352 /sec                      
+                 6      cpu-migrations                   #    2.717 /sec                      
+              3027      page-faults                      #    1.371 K/sec                     
+        2781831140      L1-dcache-loads                  #    1.260 G/sec                       (69.47%)
+        1071651521      L1-dcache-load-misses            #   38.52% of all L1-dcache accesses   (69.52%)
+          31321577      LLC-loads                        #   14.182 M/sec                       (69.43%)
+            846572      LLC-load-misses                  #    2.70% of all LL-cache accesses    (69.37%)
+        2784377937      dTLB-loads                       #    1.261 G/sec                       (30.58%)
+          11036949      dTLB-load-misses                 #    0.40% of all dTLB cache accesses  (30.67%)
+                 0      mem-loads                        #    0.000 /sec                        (38.52%)
+        1109827378      mem-stores                       #  502.527 M/sec                       (38.58%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.678226005 seconds time elapsed
+
+       2.186562000 seconds user
+       0.020928000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 5 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 13
+Duration: 0.44 seconds
+Throughput: 29.46 chunks/second
+
+Thread Pair 1:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.63 chunks/second
+
+Thread Pair 2:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.64 chunks/second
+
+Thread Pair 3:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.65 chunks/second
+
+Thread Pair 4:
+Chunks processed: 13
+Duration: 0.47 seconds
+Throughput: 27.38 chunks/second
+
+Matrix multiplication completed in 2.318163 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.62 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+       10408568927      cycles                           #    4.219 GHz                         (46.30%)
+        9900992618      instructions                     #    0.95  insn per cycle              (53.94%)
+          42762778      cache-references                 #   17.333 M/sec                       (61.53%)
+           3461134      cache-misses                     #    8.09% of all cache refs           (69.29%)
+           1124677      branch-misses                                                           (69.33%)
+           2467.18 msec task-clock                       #    3.941 CPUs utilized             
+                47      context-switches                 #   19.050 /sec                      
+                 1      cpu-migrations                   #    0.405 /sec                      
+              3030      page-faults                      #    1.228 K/sec                     
+        2786334474      L1-dcache-loads                  #    1.129 G/sec                       (69.34%)
+         786461279      L1-dcache-load-misses            #   28.23% of all L1-dcache accesses   (69.35%)
+          27430773      LLC-loads                        #   11.118 M/sec                       (69.35%)
+           1474997      LLC-load-misses                  #    5.38% of all LL-cache accesses    (69.36%)
+        2776056655      dTLB-loads                       #    1.125 G/sec                       (30.69%)
+         148012513      dTLB-load-misses                 #    5.33% of all dTLB cache accesses  (31.06%)
+                 0      mem-loads                        #    0.000 /sec                        (38.73%)
+        1129449100      mem-stores                       #  457.789 M/sec                       (38.65%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.626037205 seconds time elapsed
+
+       2.448126000 seconds user
+       0.016980000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 6 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 11
+Duration: 0.33 seconds
+Throughput: 33.36 chunks/second
+
+Thread Pair 1:
+Chunks processed: 11
+Duration: 0.33 seconds
+Throughput: 33.34 chunks/second
+
+Thread Pair 2:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.24 chunks/second
+
+Thread Pair 3:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.24 chunks/second
+
+Thread Pair 4:
+Chunks processed: 11
+Duration: 0.36 seconds
+Throughput: 30.25 chunks/second
+
+Thread Pair 5:
+Chunks processed: 11
+Duration: 0.37 seconds
+Throughput: 29.62 chunks/second
+
+Matrix multiplication completed in 2.116801 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.49 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9517499616      cycles                           #    4.243 GHz                         (46.14%)
+        9867301812      instructions                     #    1.04  insn per cycle              (53.81%)
+          50203110      cache-references                 #   22.378 M/sec                       (61.58%)
+            926207      cache-misses                     #    1.84% of all cache refs           (69.32%)
+           1109763      branch-misses                                                           (69.44%)
+           2243.36 msec task-clock                       #    4.533 CPUs utilized             
+                57      context-switches                 #   25.408 /sec                      
+                 4      cpu-migrations                   #    1.783 /sec                      
+              3034      page-faults                      #    1.352 K/sec                     
+        2778940213      L1-dcache-loads                  #    1.239 G/sec                       (69.49%)
+         912942580      L1-dcache-load-misses            #   32.85% of all L1-dcache accesses   (69.51%)
+          24144902      LLC-loads                        #   10.763 M/sec                       (69.52%)
+            206960      LLC-load-misses                  #    0.86% of all LL-cache accesses    (69.52%)
+        2784305874      dTLB-loads                       #    1.241 G/sec                       (30.62%)
+          22282132      dTLB-load-misses                 #    0.80% of all dTLB cache accesses  (30.75%)
+                 0      mem-loads                        #    0.000 /sec                        (38.48%)
+        1122774128      mem-stores                       #  500.487 M/sec                       (38.37%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.494870208 seconds time elapsed
+
+       2.226503000 seconds user
+       0.012991000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 7 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 9
+Duration: 0.28 seconds
+Throughput: 32.00 chunks/second
+
+Thread Pair 1:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.96 chunks/second
+
+Thread Pair 2:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.83 chunks/second
+
+Thread Pair 3:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.84 chunks/second
+
+Thread Pair 4:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.84 chunks/second
+
+Thread Pair 5:
+Chunks processed: 9
+Duration: 0.31 seconds
+Throughput: 28.70 chunks/second
+
+Thread Pair 6:
+Chunks processed: 10
+Duration: 0.32 seconds
+Throughput: 30.96 chunks/second
+
+Matrix multiplication completed in 2.156218 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.45 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9633053601      cycles                           #    4.211 GHz                         (46.57%)
+        9748580136      instructions                     #    1.01  insn per cycle              (54.29%)
+          52452371      cache-references                 #   22.932 M/sec                       (61.98%)
+            738905      cache-misses                     #    1.41% of all cache refs           (69.64%)
+           1111717      branch-misses                                                           (69.72%)
+           2287.35 msec task-clock                       #    5.070 CPUs utilized             
+                69      context-switches                 #   30.166 /sec                      
+                 5      cpu-migrations                   #    2.186 /sec                      
+              3038      page-faults                      #    1.328 K/sec                     
+        2773093357      L1-dcache-loads                  #    1.212 G/sec                       (69.68%)
+        1036369678      L1-dcache-load-misses            #   37.37% of all L1-dcache accesses   (69.59%)
+          25849414      LLC-loads                        #   11.301 M/sec                       (69.46%)
+             64815      LLC-load-misses                  #    0.25% of all LL-cache accesses    (69.23%)
+        2784266235      dTLB-loads                       #    1.217 G/sec                       (30.58%)
+          32713361      dTLB-load-misses                 #    1.17% of all dTLB cache accesses  (30.71%)
+                 0      mem-loads                        #    0.000 /sec                        (38.40%)
+        1110702430      mem-stores                       #  485.585 M/sec                       (38.49%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.451185016 seconds time elapsed
+
+       2.273980000 seconds user
+       0.009977000 seconds sys
+
+
+
+---------------------------------------------------
+Running with 8 threads...
+Reading matrix A
+Reading matrix B
+Multiplying matrices
+Enter the number of producer-consumer pairs: Thread Pair 0:
+Chunks processed: 8
+Duration: 0.28 seconds
+Throughput: 29.02 chunks/second
+
+Thread Pair 1:
+Chunks processed: 8
+Duration: 0.28 seconds
+Throughput: 28.40 chunks/second
+
+Thread Pair 2:
+Chunks processed: 8
+Duration: 0.31 seconds
+Throughput: 26.22 chunks/second
+
+Thread Pair 3:
+Chunks processed: 8
+Duration: 0.31 seconds
+Throughput: 26.23 chunks/second
+
+Thread Pair 4:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.24 chunks/second
+
+Thread Pair 5:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.25 chunks/second
+
+Thread Pair 6:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.25 chunks/second
+
+Thread Pair 7:
+Chunks processed: 8
+Duration: 0.30 seconds
+Throughput: 26.26 chunks/second
+
+Matrix multiplication completed in 2.193523 seconds
+Writing result to matrix_C_int.txt
+
+Total program execution time: 0.44 seconds
+
+ Performance counter stats for './matrix_mult_c':
+
+        9791351187      cycles                           #    4.200 GHz                         (46.17%)
+        9881629690      instructions                     #    1.01  insn per cycle              (53.77%)
+          53691649      cache-references                 #   23.032 M/sec                       (61.58%)
+            745293      cache-misses                     #    1.39% of all cache refs           (69.28%)
+           1131502      branch-misses                                                           (69.37%)
+           2331.19 msec task-clock                       #    5.315 CPUs utilized             
+               260      context-switches                 #  111.531 /sec                      
+                 3      cpu-migrations                   #    1.287 /sec                      
+              3043      page-faults                      #    1.305 K/sec                     
+        2776048678      L1-dcache-loads                  #    1.191 G/sec                       (69.42%)
+        1070609123      L1-dcache-load-misses            #   38.57% of all L1-dcache accesses   (69.58%)
+          30785061      LLC-loads                        #   13.206 M/sec                       (69.65%)
+             97260      LLC-load-misses                  #    0.32% of all LL-cache accesses    (69.52%)
+        2795455616      dTLB-loads                       #    1.199 G/sec                       (30.68%)
+          95782340      dTLB-load-misses                 #    3.43% of all dTLB cache accesses  (30.83%)
+                 0      mem-loads                        #    0.000 /sec                        (38.75%)
+        1127646011      mem-stores                       #  483.721 M/sec                       (38.66%)
+                 0      sched:sched_stat_sleep           #    0.000 /sec                      
+
+       0.438632059 seconds time elapsed
+
+       2.318856000 seconds user
+       0.007958000 seconds sys
+
+
