@@ -1,4 +1,4 @@
-# Multithreaded Matrix Multiplication with Producer-Consumer Pattern
+# Multithreaded Matrix Multiplication with Producer-Consumer Threads
 
 This report analyzes a multithreaded matrix multiplication implementation using the Producer-Consumer pattern. The program multiplies two 1000×1000 matrices using multiple thread pairs, with each pair consisting of a producer and consumer thread working on a shared buffer.
 
@@ -678,4 +678,3 @@ Using per-row mutexes for the result matrix allows multiple consumer threads to 
 - Increased thread counts result in higher context switching and CPU migration overhead.
 - Per-row mutex design enhances concurrent updates but is sensitive to memory access patterns.
 - Memory contention and inherent cache inefficiencies limit further scalability.
-
