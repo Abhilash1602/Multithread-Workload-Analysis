@@ -142,6 +142,27 @@ void *consumer(void *arg) {
 }
 ```
 
+## Usage
+
+### Build and Run
+
+- To build the program, run:
+  make
+- To run the program, execute:
+  ./matrix_mult_c
+
+### Detailed Performance Analysis
+
+Run the following command to analyze performance metrics using perf:
+  
+  sudo perf stat -e cycles,instructions,cache-references,cache-misses,branch-misses,task-clock,context-switches,cpu-migrations,page-faults,L1-dcache-loads,L1-dcache-load-misses,LLC-loads,LLC-load-misses,dTLB-loads,dTLB-load-misses,mem-loads,mem-stores,sched:sched_stat_sleep -- ./matrix_mult_c
+
+### Producer-Consumer Output
+
+Below is a screenshot showing the program output with 2 producer-consumer threads:
+
+![Producer-Consumer Output](prod_cons.png)
+
 ## Performance Analysis
 
 ### Execution Time vs. Number of Threads
@@ -657,3 +678,4 @@ Using per-row mutexes for the result matrix allows multiple consumer threads to 
 - Increased thread counts result in higher context switching and CPU migration overhead.
 - Per-row mutex design enhances concurrent updates but is sensitive to memory access patterns.
 - Memory contention and inherent cache inefficiencies limit further scalability.
+
