@@ -1,3 +1,6 @@
 *.exe
 .vscode
 *.pdf
+*.txt
+*.sh
+matrix_mult_openmp
