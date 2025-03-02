@@ -1,13 +1,9 @@
 #define _POSIX_C_SOURCE 199309L
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "matrix_common.h"
 #include <sys/time.h>
-#include <string.h>
 #include <pthread.h>
 #include <unistd.h>
 
-#define MATRIX_SIZE 1000
 #define BUFFER_SIZE 32
 #define CHUNK_SIZE 16  // Number of rows to process in one task
 
@@ -199,46 +195,6 @@ void multiply_matrices(int (*A)[MATRIX_SIZE], int (*B)[MATRIX_SIZE], int (*C)[MA
     free(consumers);
 }
 
-// Write matrix to file (space-separated format)
-void write_matrix_to_file(const char* filename, int (*matrix)[MATRIX_SIZE]) {
-    FILE* file = fopen(filename, "w");
-    if (!file) {
-        perror("Error opening file for writing");
-        return;
-    }
-
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            fprintf(file, "%d", matrix[i][j]);
-            if (j < MATRIX_SIZE - 1) {
-                fprintf(file, " ");
-            }
-        }
-        fprintf(file, "\n");
-    }
-    fclose(file);
-}
-
-// Read matrix from text file (space-separated format)
-void read_matrix_from_text_file(const char* filename, int (*matrix)[MATRIX_SIZE]) {
-    FILE* file = fopen(filename, "r");
-    if (!file) {
-        perror("Error opening file for reading");
-        return;
-    }
-
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            if (fscanf(file, "%d", &matrix[i][j]) != 1) {
-                printf("Error reading value at position (%d,%d)\n", i, j);
-                fclose(file);
-                return;
-            }
-        }
-    }
-    fclose(file);
-}
-
 int main() {
     struct timespec program_start, program_end;
     clock_gettime(CLOCK_MONOTONIC, &program_start);
@@ -262,22 +218,10 @@ int main() {
 
     // Read input matrices with error checking
     printf("Reading matrix A\n");
-    FILE* file_A = fopen("matrix_A_int.txt", "r");
-    if (!file_A) {
-        perror("Error opening matrix_A_int.txt");
-        goto cleanup;
-    }
     read_matrix_from_text_file("matrix_A_int.txt", A);
-    fclose(file_A);
 
     printf("Reading matrix B\n");
-    FILE* file_B = fopen("matrix_B_int.txt", "r");
-    if (!file_B) {
-        perror("Error opening matrix_B_int.txt");
-        goto cleanup;
-    }
     read_matrix_from_text_file("matrix_B_int.txt", B);
-    fclose(file_B);
 
     // Multiply matrices with timing
     printf("Multiplying matrices\n");
@@ -289,15 +233,14 @@ int main() {
     printf("Matrix multiplication completed in %f seconds\n", execution_time);
 
     // Write result to file
-    printf("Writing result to matrix_C_int.txt\n");
-    write_matrix_to_file("matrix_C_int.txt", C);
+    printf("Writing result to matrix_C_concurrent.txt\n");
+    write_matrix_to_file("matrix_C_concurrent.txt", C);
 
     clock_gettime(CLOCK_MONOTONIC, &program_end);
     double total_time = (program_end.tv_sec - program_start.tv_sec) +
                        (program_end.tv_nsec - program_start.tv_nsec) / 1e9;
     printf("\nTotal program execution time: %.2f seconds\n", total_time);
 
-cleanup:
     // Clean up
     free(A);
     free(B);

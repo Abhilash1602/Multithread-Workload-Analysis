@@ -1,76 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include <omp.h>
-
-#define MATRIX_SIZE 1000
+#include "matrix_common.h"
 
 // Global matrices
 int (*A)[MATRIX_SIZE];
 int (*B)[MATRIX_SIZE];
 int (*C)[MATRIX_SIZE];
-
-// Write matrix to file (space-separated format)
-void write_matrix_to_file(const char* filename, int (*matrix)[MATRIX_SIZE]) {
-    FILE* file = fopen(filename, "w");
-    if (!file) {
-        perror("Error opening file for writing");
-        return;
-    }
-
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            fprintf(file, "%d", matrix[i][j]);
-            if (j < MATRIX_SIZE - 1) {
-                fprintf(file, " ");
-            }
-        }
-        fprintf(file, "\n");
-    }
-    fclose(file);
-}
-
-// Read matrix from text file (space-separated format)
-void read_matrix_from_text_file(const char* filename, int (*matrix)[MATRIX_SIZE]) {
-    FILE* file = fopen(filename, "r");
-    if (!file) {
-        perror("Error opening file for reading");
-        return;
-    }
-
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            if (fscanf(file, "%d", &matrix[i][j]) != 1) {
-                printf("Error reading value at position (%d,%d)\n", i, j);
-                fclose(file);
-                return;
-            }
-        }
-    }
-    fclose(file);
-}
-
-// Simple OpenMP matrix multiplication
-void multiply_matrices_openmp_simple(int num_threads) {
-    omp_set_num_threads(num_threads);
-    
-    double start_time = omp_get_wtime();
-    
-    #pragma omp parallel for
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            int sum = 0;
-            for (int k = 0; k < MATRIX_SIZE; k++) {
-                sum += A[i][k] * B[k][j];
-            }
-            C[i][j] = sum;
-        }
-    }
-    
-    double end_time = omp_get_wtime();
-    printf("OpenMP simple multiplication completed in %.4f seconds\n", end_time - start_time);
-}
 
 // Block-based OpenMP matrix multiplication with tasks
 void multiply_matrices_openmp_tasks(int num_threads, int block_size) {
@@ -120,28 +53,6 @@ void multiply_matrices_openmp_tasks(int num_threads, int block_size) {
            end_time - start_time, block_size);
 }
 
-// Dynamic work-stealing OpenMP implementation
-void multiply_matrices_dynamic_workstealing(int num_threads) {
-    omp_set_num_threads(num_threads);
-    
-    double start_time = omp_get_wtime();
-    
-    // We'll use a guided schedule for dynamic work distribution
-    #pragma omp parallel for schedule(guided)
-    for (int i = 0; i < MATRIX_SIZE; i++) {
-        for (int j = 0; j < MATRIX_SIZE; j++) {
-            int sum = 0;
-            for (int k = 0; k < MATRIX_SIZE; k++) {
-                sum += A[i][k] * B[k][j];
-            }
-            C[i][j] = sum;
-        }
-    }
-    
-    double end_time = omp_get_wtime();
-    printf("OpenMP work-stealing multiplication completed in %.4f seconds\n", end_time - start_time);
-}
-
 int main() {
     int num_threads;
     printf("Enter the number of threads: ");
@@ -172,29 +83,22 @@ int main() {
     // Start timing the entire program
     clock_t program_start = clock();
     
-    printf("Running with %d threads\n", num_threads);
-
-    // Try different implementations
-    printf("\n1. Standard OpenMP implementation\n");
-    multiply_matrices_openmp_simple(num_threads);
+    printf("Running task-based OpenMP with %d threads\n", num_threads);
     
-    printf("\n2. OpenMP task-based implementation with blocks\n");
     // Try different block sizes for best performance
     int block_sizes[] = {16, 32, 64, 128};
     for (int i = 0; i < sizeof(block_sizes)/sizeof(int); i++) {
         multiply_matrices_openmp_tasks(num_threads, block_sizes[i]);
     }
-    
-    printf("\n3. Dynamic work-stealing implementation\n");
-    multiply_matrices_dynamic_workstealing(num_threads);
 
-    printf("\nWriting result to matrix_C_openmp.txt\n");
-    write_matrix_to_file("matrix_C_openmp.txt", C);
+    // Use the result from the last execution (block_size=128)
+    printf("Writing result to matrix_C_openmp_tasks.txt\n");
+    write_matrix_to_file("matrix_C_openmp_tasks.txt", C);
 
     // Calculate total program execution time
     clock_t program_end = clock();
     double total_time = (double)(program_end - program_start) / CLOCKS_PER_SEC;
-    printf("\nTotal program execution time: %.2f seconds\n", total_time);
+    printf("Total program execution time: %.2f seconds\n", total_time);
 
     free(A);
     free(B);
